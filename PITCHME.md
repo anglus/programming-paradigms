@@ -41,4 +41,43 @@
 0000047
 ```
 ---
+### Assembly Language
+
+``` nasm
+section .data
+    msg db '24', 10     ; the string '24', followed by a newline (10) character
+    len equ $ - msg     ; the length of msg
+
+section .text
+    global _start
+
+_start:
+    ; Print message 
+    mov edx, len                ; message length
+    mov ecx, msg                ; message to write 
+    mov ebx, 1          ; file descriptor (stdout)
+    mov eax, 4          ; system call number (sys_write)
+    int 80h             ; kernel interrupt
+
+    ; Exit
+    mov eax, 1          ; system call number (sys_exit)
+    int 80h             ; kernel interrupt
+```
+---
+### Unstructured Programming
+
+Tiny BASIC:
+
+```
+10 LET N=1 
+20 PRINT N
+30 LET N=N+1
+40 IF N<25 GOTO 20
+50 END
+```
+
+Assembly Language, Fortran, BASIC, ...
+
+Most of these languages can be written in a structured style these days.
+---
 ### Questions?
