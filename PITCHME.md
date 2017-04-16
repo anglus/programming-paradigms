@@ -43,7 +43,7 @@
 ---
 ### Assembly Language
 
-``` nasm
+``` x86asm
 section .data
     msg db '24', 10     ; the string '24', followed by a newline (10) character
     len equ $ - msg     ; the length of msg
@@ -68,7 +68,7 @@ _start:
 
 Tiny BASIC:
 
-```
+``` basic
 10 LET N=1 
 20 PRINT N
 30 LET N=N+1
