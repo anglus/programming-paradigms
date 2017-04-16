@@ -1,12 +1,11 @@
 ---
 ## Programming Paradigms
 
-### Matthew Morris
-### April 20, 2017
+#### Matthew Morris
+#### April 20, 2017
 ---
 ### Paradigms
 
-* Non-structured
 * Structured
   * Imperative
     * Procedural
