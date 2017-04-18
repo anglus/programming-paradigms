@@ -71,7 +71,7 @@ _start:
 - 1949 Short Code (high-level mathematical expressions)
 - 1952 Autocode (compiled; abstracted groups of opcodes for e.g. printing)
 - 1957 Fortran (optimizing compiler; IF, DO, GO TO) 
-----
+---
 ### Development of High-level Languages (cont.)
 
 - 1958 Fortran II (subroutines and functions)
