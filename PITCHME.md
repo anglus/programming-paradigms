@@ -71,6 +71,9 @@ _start:
 - 1949 Short Code (mathematical expressions)
 - 1952 Autocode (compiled)
 - 1957 Fortran (optimizing compiler; IF, DO, GO TO) 
+----
+### Development of High-level Languages (cont.)
+
 - 1958 Fortran II (subroutines and functions)
 - 1958 ALGOL 58 (compound statements, FOR loops, assignment ≠ equality)
 - 1958 Lisp (homoiconic, macros, recursion, anonymous functions, conditionals) 
