@@ -66,16 +66,16 @@ _start:
 ---
 ### Development of High-level Languages
 
-1948 Plankalkül (high-level, concept only)
-1949 EDSAC assembler (opcode mnemonics)
-1949 Short Code (mathematical expressions)
-1952 Autocode (compiled)
-1957 Fortran (optimizing compiler; IF, DO, GO TO) 
-1958 Fortran II (subroutines and functions)
-1958 ALGOL 58 (compound statements, FOR loops, assignment ≠ equality)
-1958 Lisp (homoiconic, macros, recursion, anonymous functions, conditionals) 
-1959 COBOL (natural language programming, records/structs)
-1960 ALGOL 60 (code blocks, nested functions, lexical scoping, IF-THEN-ELSE)
+-1948 Plankalkül (high-level, concept only)
+-1949 EDSAC assembler (opcode mnemonics)
+-1949 Short Code (mathematical expressions)
+-1952 Autocode (compiled)
+-1957 Fortran (optimizing compiler; IF, DO, GO TO) 
+-1958 Fortran II (subroutines and functions)
+-1958 ALGOL 58 (compound statements, FOR loops, assignment ≠ equality)
+-1958 Lisp (homoiconic, macros, recursion, anonymous functions, conditionals) 
+-1959 COBOL (natural language programming, records/structs)
+-1960 ALGOL 60 (code blocks, nested functions, lexical scoping, IF-THEN-ELSE)
 ---
 ### Unstructured Programming
 
