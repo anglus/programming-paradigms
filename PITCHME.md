@@ -66,11 +66,11 @@ _start:
 ---
 ### Development of High-level Languages
 
-- 1948 Plankalkül (high-level, not implemented until 2000)
-- 1949 EDSAC assembler (one-to-one opcode mnemonics)
-- 1949 Short Code (high-level mathematical expressions)
-- 1952 Autocode (compiled; abstract common operations, e.g. printing)
-- 1957 Fortran (optimizing compiler; IF, DO loops, and GO TO) 
+- 1948 Plankalkül (high-level, concept only)
+- 1949 EDSAC assembler (1-to-1 opcode mnemonics)
+- 1949 Short Code (mathematical expressions)
+- 1952 Autocode (compiled; aggretated operations)
+- 1957 Fortran (optimizing compiler; IF, DO, GO TO) 
 - 1958 Fortran II (subroutines and functions)
 - 1958 ALGOL 58 (compound statements, FOR loops, assignment ≠ equality)
 - 1958 Lisp (homoiconic, macros, recursion, anonymous functions, conditionals) 
