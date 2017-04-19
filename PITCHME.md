@@ -108,7 +108,7 @@ Most of these languages can be written in a structured style these days.
 Basic control structures: sequence, selection, iteration
 ---
 ### Procedural Programming
----?image=asset/634px-Mai_Chau_-_Hausbau.jpg
+---?image=assets/634px-Mai_Chau_-_Hausbau.jpg
 ---
 ### Examples
 
@@ -147,6 +147,14 @@ Some object-oriented languages can be written in a procedural style.
 - Data is "encapsulated" and not modified directly.
 - Operations are performed on data through simplified interfaces.
 - Objects may be derived from other objects through inheritance or composition.
+---
+### Perceived benefits
+
+- Modularity
+- Code reuse
+- Protection of data from modification
+- Abstracted interfaces (polymorphism)
+- Natural way of thinking about the world
 ---
 ### Example
 
@@ -189,6 +197,26 @@ class TwentyFour {
 }
 ```
 ---
+### Object-oriented Programming Languages
+
+- Class: Simula 67, Smalltalk, C++, Objective-C, Python, Java, C#
+- Prototype: Self, Lua, JavaScript, Rebol 
+---
+### Functional Programming
+---
+### What is functional programming? 
+
+- Lambdas?
+- No side effects? 
+- Immutable data?
+- Recursion?
+- Higher-order functions?
+- Closures?
+- Currying?
+- Monads? 
+---?image=assets/760px-Selznick_Kimball_Young.jpg
+---?image=assets/680px-Ford_assembly_line_-_1913.jpg
+---
 ### Function Composition
 
 Lisp:
@@ -196,9 +224,9 @@ Lisp:
 (baz (bar (foo x)))
 ```
 
-ML:
-``` sml
-baz bar foo x
+Erlang:
+``` erlang
+baz(bar(foo(X))).
 ```
 
 Scala:
@@ -207,9 +235,272 @@ x.foo().bar().baz()
 ```
 
 Unix:
-``` sh
+``` shell
 foo x | bar | baz
 ```
+---
+### Principles of Functional Programming
+
+- No side effects
+- Immutable data
+- Function composition
+---
+### How does it work?
+
+- Data structures as parameters and return values
+- Recursion vs. iteration
+- Higher-order functions vs. iteration
+- Pattern-matching vs. IF statements
+- Small functions forming larger functions 
+- Save side effects for last
+---
+### Perceived Benefits
+
+- Less verbose 
+- Easier to prove correct
+- Fewer bugs
+- Easier to make parallel or concurrent
+---
+### Functional Programming Languages
+
+- Lisp, Scheme, Clojure, Racket
+- Standard ML, OCaml, F#, Scala, Elm
+- Hope, Miranda, Haskell
+- Erlang, Elixir
+- Matlab/Octave, R
+---
+### Recursion
+
+Iteration:
+``` python
+for n in range(1,25):
+    print(n)
+```
+
+Recursion:
+``` python
+def count(s,f):
+    if s <= f:
+        print(s)
+        count(s+1,f)
+
+count(1,24)
+```
+---
+### Lisp
+
+``` lisp
+(defun range (first last)
+  (if (<= first last)
+    (progn
+      (format t "~a~%" first)
+      (range (+ 1 first) last))))
+
+(range 1 24)
+```
+---
+### Lisp - List + Delayed Side Effects
+
+``` lisp
+(defun range (first last)
+  (if (<= first last)
+      (cons first (range (+ 1 first) last))))
+
+(format t "~{~a~%~}" (range 1 24))
+```
+---
+### Objective Caml - Pattern Matching
+
+``` ocaml
+open Printf;;
+
+let rec range s f =
+  match s == f with
+  | true -> [f]
+  | _ -> s :: range (s + 1) f;; 
+
+let numlist = range 1 24;;
+let () = List.iter (printf "%d\n") numlist
+```
+---
+### Erlang - Case Expression
+
+``` erlang
+range(S,F) ->
+    case S == F of
+      true -> [F];
+      _ -> [S|range(S+1,F)]
+    end.
+
+main([]) ->
+    [io:format("~w~n", [E]) || E <- range(1,24)].
+```
+---
+### Erlang - Pattern Matching 
+
+``` erlang
+range(F,F) -> [F];
+range(S,F) -> [S|range(S+1,F)]. 
+
+main([]) ->
+    [io:format("~w~n", [E]) || E <- range(1,24)].
+```
+---
+### Erlang - Tail Recursion
+
+``` erlang
+range(S,F) -> range(S,F,[]).
+
+range(S,F,Acc) when S > F -> Acc;
+range(S,F,Acc) -> range(S,F-1,[F|Acc]). 
+
+main([]) ->
+    [io:format("~w~n", [E]) || E <- range(1,24)].
+```
+---
+### Higher-order Functions
+
+- **map:** apply function to each element
+```
+f(x) -> 2*x:
+
+[1,2,3,4] -> [2,4,6,8]
+```
+- **filter:** remove matching elements
+```
+f(x) -> x, x % 2 == 0:
+
+[1,2,3,4] -> [1,3]
+```
+- **reduce:** 
+```
+f(x,y) -> x*y:
+
+[1,2,3,4] -> [10]
+```
+---
+### Haskell - Higher-order Functions
+
+``` haskell
+main = do
+    sequence (map print [1..24])
+```
+``` haskell
+main = do
+    mapM print [1..24]
+```
+---
+### Scala - Higher-order Functions
+
+``` scala
+1.to(24).map(println)
+```
+
+``` scala
+1 to 24 map println
+```
+---
+### Pyret - Higher-order Functions
+
+``` python
+map(print, range(1,25))
+```
+
+``` python
+range(1,25).map(print)
+```
+---
+### Logic Programming
+---?image=assets/Leonard_Nimoy_Spock_1967.jpg
+---
+### Anatomy of a Function
+
+Function (Erlang):
+``` erlang
+max(X,Y) when X >= Y -> X;
+max(X,Y) when X < Y -> Y.
+```
+---
+### Functions vs. Relations
+
+Function (Erlang):
+``` erlang
+max(X,Y) when X >= Y -> X;
+max(X,Y) when X < Y -> Y.
+```
+
+Relation (Prolog):
+``` prolog
+max(X,Y,X) :- X >= Y.
+max(X,Y,Y) :- X < Y.
+```
+---
+### Facts and Rules
+
+``` prolog
+vulcan(surak).
+vulcan(tpau).
+vulcan(sarek).
+
+mortal(X) :- vulcan(X).
+```
+---
+### Backtracking
+
+``` prolog
+?- vulcan(Y).
+Y = surak ;
+Y = tpau ;
+Y = sarek.
+
+```
+---
+### Logical Inference
+
+``` prolog
+?- mortal(Z).
+
+```
+---
+### Logical Inference
+
+``` prolog
+?- mortal(Z).
+Z = surak ;
+Z = tpau ;
+Z = sarek.
+
+```
+---
+### Prolog - Recursion
+
+``` prolog
+:- initialization main.
+
+range(F,F,Tail) :- !, Tail = [F].
+range(S,F,[S|Tail]) :- N is S+1, range(N,F,Tail).
+
+main :-
+    range(1,24,Range),
+    maplist(writeln,Range),
+    halt. 
+```
+---
+### Prolog - Higher-order Relations
+
+``` prolog
+:- initialization main.
+
+main :-
+    numlist(1,24,Range),
+    maplist(writeln,Range),
+    halt.
+```
+---
+### Logic Programming Languages
+
+- Prolog, Datalog, Mercury, Logtalk
+- Planner, CycL, Oz, Gödel, Twelf
 ---
 ### Summary
 
