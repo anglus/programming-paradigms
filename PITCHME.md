@@ -105,7 +105,8 @@ Most of these languages can be written in a structured style these days.
 - **1968** "A Case against the GO TO Statement", Dijkstra 
 - **1969** *Notes on Structured Programming*, Dijkstra 
 
-Basic control structures: sequence, selection, iteration
+Basic control structures:
+**sequence, selection, iteration**
 ---
 ### Procedural Programming
 ---?image=assets/634px-Mai_Chau_-_Hausbau.jpg
@@ -365,12 +366,12 @@ main([]) ->
 [1,2,3,4] -> [2,4,6,8]
 ```
 
-- **filter:** remove matching elements
+- **filter:** keep elements that satisfy a condition
 ``` erlang
-[1,2,3,4] -> [1,3]
+[1,2,3,4] -> [2,4]
 ```
 
-- **reduce:** 
+- **reduce:** combine the elements together 
 ``` erlang
 [1,2,3,4] -> [10]
 ```
@@ -417,7 +418,7 @@ max(X,Y) when X >= Y -> X;
 max(X,Y) when X < Y -> Y.
 ```
 ---
-### Functions vs. Relations
+### Functions vs. Predicates 
 
 Function (Erlang):
 ``` erlang
@@ -440,8 +441,8 @@ vulcan(sarek).
 
 mortal(X) :- vulcan(X).
 ```
-**atom:** not capitalized; like Ruby symbol
-**variable:** capitalized; may only be bound to one value, except in the case of backtracking
+- **atom:** not capitalized; like Ruby symbol
+- **variable:** capitalized; may only be bound to one value, except in the case of backtracking
 ---
 ### Backtracking
 
@@ -484,7 +485,7 @@ main :-
     halt. 
 ```
 ---
-### Prolog - Higher-order ~~Functions~~ Relations
+### Prolog - Higher-order Predicates 
 
 ``` prolog
 :- initialization main.
@@ -495,6 +496,13 @@ main :-
     halt.
 ```
 ---
+### Uses of Logic Programming
+
+- theorem proving (verifying the correctness of, e.g. computer programs)
+- expert systems (decision trees)
+- rules-based natural language processing (esp. question answering, e.g. Watson)
+- pretty much anything
+--- 
 ### Logic Programming Languages
 
 - Prolog, Datalog, Mercury, Logtalk
