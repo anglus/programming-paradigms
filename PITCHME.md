@@ -235,7 +235,7 @@ x.foo().bar().baz()
 ```
 
 Unix:
-``` shell
+``` bash 
 foo x | bar | baz
 ```
 ---
@@ -361,21 +361,17 @@ main([]) ->
 ### Higher-order Functions
 
 - **map:** apply function to each element
-```
-f(x) -> 2*x:
-
+``` erlang
 [1,2,3,4] -> [2,4,6,8]
 ```
-- **filter:** remove matching elements
-```
-f(x) -> x, x % 2 == 0:
 
+- **filter:** remove matching elements
+``` erlang
 [1,2,3,4] -> [1,3]
 ```
-- **reduce:** 
-```
-f(x,y) -> x*y:
 
+- **reduce:** 
+``` erlang
 [1,2,3,4] -> [10]
 ```
 ---
@@ -444,6 +440,8 @@ vulcan(sarek).
 
 mortal(X) :- vulcan(X).
 ```
+**atom:** not capitalized; like Ruby symbol
+**variable:** capitalized; may only be bound to one value, except in the case of backtracking
 ---
 ### Backtracking
 
@@ -486,7 +484,7 @@ main :-
     halt. 
 ```
 ---
-### Prolog - Higher-order Relations
+### Prolog - Higher-order ~~Functions~~ Relations
 
 ``` prolog
 :- initialization main.
