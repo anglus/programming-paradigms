@@ -80,7 +80,7 @@ _start:
 - 1959 **COBOL** (natural language programming, records/structs)
 - 1960 **ALGOL 60** (code blocks, nested functions, lexical scoping, IF-THEN-ELSE)
 ---
-### Unstructured Programming Example 
+### Unstructured Programming
 
 Tiny BASIC:
 
@@ -132,6 +132,10 @@ for n in range(1,25):
 ```
 
 ALGOL, C, Pascal, Ada, ... 
+---
+### Object-oriented Programming
+---
+![Object-oriented Programming](assets/ITER_model.jpg)
 ---
 ### Function Composition
 
