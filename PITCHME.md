@@ -91,6 +91,8 @@ Tiny BASIC:
 40 IF N<25 GOTO 20
 50 END
 ```
+---
+### Unstructured Programming Languages
 
 Assembly Language, Fortran, COBOL, BASIC, ...
 
@@ -106,8 +108,7 @@ Most of these languages can be written in a structured style these days.
 Basic control structures: sequence, selection, iteration
 ---
 ### Procedural Programming
----
-![Procedural Programming](assets/634px-Mai_Chau_-_Hausbau.jpg)
+---?image=asset/634px-Mai_Chau_-_Hausbau.jpg
 ---
 ### Examples
 
@@ -130,12 +131,63 @@ Python:
 for n in range(1,25):
     print(n)
 ```
+---
+### Procedural Programming Languages
 
 ALGOL, C, Pascal, Ada, ... 
+
+Some object-oriented languages can be written in a procedural style.
 ---
 ### Object-oriented Programming
+---?image=assets/ITER_model.jpg
 ---
-![Object-oriented Programming](assets/ITER_model.jpg)
+### Principles of OOP
+
+- "Objects" incorporate both data and procedures.
+- Data is "encapsulated" and not modified directly.
+- Operations are performed on data through simplified interfaces.
+- Objects may be derived from other objects through inheritance or composition.
+---
+### Example
+
+``` java
+class TwentyFour {
+    // Class definition for the Range object.
+    public static class Range {
+        private int start;
+        private int finish;
+        private int[] range;
+
+        // Constructor for the Range object.
+        public Range(int s, int f) {
+            start = s;
+            finish = f;
+            range = new int[(finish + 1) - start];
+            
+            for (int i = 0; i < (finish + 1) - start; i++) {
+                range[i] = start + i; 
+            }
+        }
+
+        // toString method for the Range object.
+        public String toString() {
+            String output = "";
+            for (int i = 0; i < range.length; i++) {
+                output += range[i] + "\n";
+            }
+            return output; 
+        }
+    }
+
+    // The main method.
+    public static void main(String[] args) {
+        int begin = 1, end = 24;
+
+        Range r = new Range(begin, end);
+        System.out.print(r);
+    }
+}
+```
 ---
 ### Function Composition
 
