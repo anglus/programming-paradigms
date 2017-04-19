@@ -132,6 +132,7 @@ for n in range(1,25):
 ```
 
 ALGOL, C, Pascal, Ada, ... 
+---
 ### Function Composition
 
 Lisp:
@@ -165,4 +166,5 @@ foo x | bar | baz
 - **Object-oriented:** encapsulation
 - **Functional:** function composition
 - **Logic:** logical relations
+---
 ### Questions?
