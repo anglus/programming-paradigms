@@ -13,3 +13,7 @@ URL: https://commons.wikimedia.org/wiki/File:Selznick_Kimball_Young.jpg
 "Ford assembly line - 1923" by unknown
 License: public domain in the U.S.
 URL: https://commons.wikimedia.org/wiki/File:Ford_assembly_line_-_1913.jpg
+
+"Leonard Nimoy Spock 1967" by NBC Television
+License: public domain in the U.S.
+URL: https://commons.wikimedia.org/wiki/File:Leonard_Nimoy_Spock_1967.jpg
