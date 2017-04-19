@@ -80,7 +80,7 @@ _start:
 - 1959 **COBOL** (natural language programming, records/structs)
 - 1960 **ALGOL 60** (code blocks, nested functions, lexical scoping, IF-THEN-ELSE)
 ---
-### Unstructured Programming
+### Unstructured Programming Example 
 
 Tiny BASIC:
 
@@ -96,4 +96,73 @@ Assembly Language, Fortran, COBOL, BASIC, ...
 
 Most of these languages can be written in a structured style these days.
 ---
+### Structured Programming
+
+- **1960** ALGOL 60 (subroutines, blocks, FOR, WHILE, IF-THEN-ELSE)
+- **1966** structured program theorem, Böhm and Jacopini 
+- **1968** "A Case against the GO TO Statement", Dijkstra 
+- **1969** *Notes on Structured Programming*, Dijkstra 
+
+Basic control structures: sequence, selection, iteration
+---
+### Procedural Programming
+
+![Procedural Programming](assets/634px-Mai_Chau_-_Hausbau.jpg)
+---
+### Procedural Programming Examples
+
+C:
+``` c
+#include "stdio.h"
+
+int main(void) {
+    int n;
+
+    for (n = 1; n <= 24; n++) {
+        printf("%d\n", n);
+    }
+    return 0;
+}
+```
+
+Python:
+``` python
+for n in range(1,25):
+    print(n)
+```
+
+ALGOL, C, Pascal, Ada, ... 
+### Function Composition
+
+Lisp:
+``` lisp
+(baz (bar (foo x)))
+```
+
+ML:
+``` sml
+baz bar foo x
+```
+
+Erlang:
+``` erlang 
+baz(bar(foo(X))).
+```
+
+Scala:
+``` scala
+x.foo().bar().baz()
+```
+
+Unix:
+``` sh
+foo x | bar | baz
+```
+---
+### Summary
+
+- **Procedural:** scope
+- **Object-oriented:** encapsulation
+- **Functional:** function composition
+- **Logic:** logical relations
 ### Questions?
