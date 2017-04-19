@@ -106,10 +106,10 @@ Most of these languages can be written in a structured style these days.
 Basic control structures: sequence, selection, iteration
 ---
 ### Procedural Programming
-
+---
 ![Procedural Programming](assets/634px-Mai_Chau_-_Hausbau.jpg)
 ---
-### Procedural Programming Examples
+### Examples
 
 C:
 ``` c
@@ -143,11 +143,6 @@ Lisp:
 ML:
 ``` sml
 baz bar foo x
-```
-
-Erlang:
-``` erlang 
-baz(bar(foo(X))).
 ```
 
 Scala:
