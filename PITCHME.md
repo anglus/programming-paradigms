@@ -104,9 +104,14 @@ Most of these languages can be written in a structured style these days.
 - **1966** structured program theorem, Böhm and Jacopini 
 - **1968** "A Case against the GO TO Statement", Dijkstra 
 - **1969** *Notes on Structured Programming*, Dijkstra 
+---
+### Structured Program Theorem
 
-Basic control structures:
-- **sequence, selection, iteration**
+Any computing problem may be solved using only three control structures:
+
+- sequence (consecutive execution)
+- selection (branch)
+- iteration (loop)
 ---
 ### Procedural Programming
 ---?image=assets/634px-Mai_Chau_-_Hausbau.jpg
@@ -144,13 +149,12 @@ Many object-oriented languages can be written in a procedural style.
 ---
 ### ITER Components
 
-- **China:** blanket system, magnets
-- **Europe:** vacuum vessel, divertor, blanket system, magnets
-- **India:** cooling system
-- **Japan:** central solenoid, divertor, magnets
-- **Korea:** vacuum vessel, blanket system, magnets
-- **Russia:** divertor, blanket system, magnets
-- **United States:** central solenoid, cooling system, blanket system, magnets 
+- **blanket system:** China, Europe, Korea, Russia, US 
+- **central solenoid:** Japan, US 
+- **cooling system:** India, US 
+- **divertor:** Europe, Japan, Russia 
+- **magnets:** China, Europe, Japan, Korea, Russia, US 
+- **vacuum vessel:** Europe, Korea 
 ---
 ### Principles of OOP
 
@@ -573,6 +577,15 @@ N←⍳24 ⋄ ⍕N∘.×,1
 
 - APL, A+, J, K, Q
 - Fortran, Dartmouth BASIC, Matlab, R, Wolfram, SequenceL, Chapel, Julia
+---
+### What about Ruby?
+---
+### What about Ruby?
+
+- Mostly class-based object-oriented
+- Procedural style easily used 
+- Some functional aspects
+- __goto__ may be enabled by compiling MRI with SUPPORT_JOKE
 ---
 ### Summary
 
