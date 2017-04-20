@@ -84,7 +84,7 @@ _start:
 
 Tiny BASIC:
 
-```
+``` basic
 10 LET N=1 
 20 PRINT N
 30 LET N=N+1
