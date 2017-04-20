@@ -142,6 +142,16 @@ Many object-oriented languages can be written in a procedural style.
 ### Object-oriented Programming
 ---?image=assets/ITER_model.jpg
 ---
+### ITER Components
+
+- **China:** blanket system, magnets
+- **Europe:** vacuum vessel, divertor, blanket system, magnets
+- **India:** cooling system
+- **Japan:** central solenoid, divertor, magnets
+- **Korea:** vacuum vessel, blanket system, magnets
+- **Russia:** divertor, blanket system, magnets
+- **United States:** central solenoid, cooling system, blanket system, magnets 
+---
 ### Principles of OOP
 
 - "Objects" incorporate both data and procedures.
@@ -512,7 +522,7 @@ main :-
 - theorem proving (verifying the correctness of, e.g. computer programs)
 - expert systems (decision trees)
 - rules-based natural language processing (esp. question answering, e.g. Watson)
-- pretty much anything
+- pretty much anything that isn't too low-level and doesn't require heavy-duty number crunching
 --- 
 ### Logic Programming Languages
 
@@ -549,7 +559,7 @@ twenty-four
 ---
 ### APL
 
-``` erlang
+```
 N←⍳24 ⋄ ⍕N∘.×,1
 ```
 - ⍳24 Index generator (create a vector of the first 24 integers) 
