@@ -106,7 +106,7 @@ Most of these languages can be written in a structured style these days.
 - **1969** *Notes on Structured Programming*, Dijkstra 
 
 Basic control structures:
-**sequence, selection, iteration**
+- **sequence, selection, iteration**
 ---
 ### Procedural Programming
 ---?image=assets/634px-Mai_Chau_-_Hausbau.jpg
@@ -137,7 +137,7 @@ for n in range(1,25):
 
 ALGOL, C, Pascal, Ada, ... 
 
-Some object-oriented languages can be written in a procedural style.
+Many object-oriented languages can be written in a procedural style.
 ---
 ### Object-oriented Programming
 ---?image=assets/ITER_model.jpg
@@ -200,8 +200,8 @@ class TwentyFour {
 ---
 ### Object-oriented Programming Languages
 
-- Class: Simula 67, Smalltalk, C++, Objective-C, Python, Java, C#
-- Prototype: Self, Lua, JavaScript, Rebol 
+- **Class:** Simula 67, Smalltalk, C++, Objective-C, Python, Java, C#
+- **Prototype:** Self, Lua, JavaScript, Rebol 
 ---
 ### Functional Programming
 ---
@@ -418,7 +418,7 @@ max(X,Y) when X >= Y -> X;
 max(X,Y) when X < Y -> Y.
 ```
 ---
-### Functions vs. Predicates 
+### Functions vs. Relations 
 
 Function (Erlang):
 ``` erlang
@@ -443,6 +443,17 @@ mortal(X) :- vulcan(X).
 ```
 - **atom:** not capitalized; like Ruby symbol
 - **variable:** capitalized; may only be bound to one value, except in the case of backtracking
+---
+### Queries 
+
+``` prolog
+?- vulcan(sarek).
+true.
+
+?- vulcan(spock).
+false.
+
+```
 ---
 ### Backtracking
 
@@ -507,6 +518,51 @@ main :-
 
 - Prolog, Datalog, Mercury, Logtalk
 - Planner, CycL, Oz, Gödel, Twelf
+---
+### Other Paradigms
+---
+### Stack-oriented / Concatenative Programming
+---
+### Forth - Arithmetic 
+
+```
+4 6 mul .
+```
+1. Push 4 on the stack.
+2. Push 6 on the stack.
+3. Pop the last two values from the stack, multiply them, and push the result onthe stack.
+4. Pop the top value (24) from the stack and display it.
+---
+### Forth - Definition, Range, and Loop
+
+```
+: twenty-four 
+  25 1 do cr i . loop ;
+twenty-four
+```
+---
+### Stack-oriented / Concatenative Programming Languages
+
+- Forth, PostScript, Joy, Factor
+---
+### Array Programming
+---
+### APL
+
+``` erlang
+N←⍳24 ⋄ ⍕N∘.×,1
+```
+- ⍳24 Index generator (create a vector of the first 24 integers) 
+- ← Assignment operator
+- ⋄ Statement separator
+- ∘. Outer product
+- ,1 Ravel (reshape 1 into a vector) 
+- ⍕N Character representation of N
+---
+### Array Programming Languages
+
+- APL, A+, J, K, Q
+- Fortran, Dartmouth BASIC, Matlab, R, Wolfram, SequenceL, Chapel, Julia
 ---
 ### Summary
 
